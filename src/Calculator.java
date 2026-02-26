@@ -1,12 +1,20 @@
 
 public class Calculator{ //falta singelton
 
-    StackA<Double> stack;
+    private static Calculator instance;
+
+    private Calculator() {
+        // constructor privado
+    }
+
+    public static Calculator getInstance() {
+        if (instance == null) {
+            instance = new Calculator();
+        }
+        return instance;
+    }
     
-    public Calculator() {
-        //stack = new Stack<Double>();    } 
-    
-    public double operate(String input) {
+    public double operate(String input, Stack<Double> stack) {
 
         System.out.println("Input: " + input);
 

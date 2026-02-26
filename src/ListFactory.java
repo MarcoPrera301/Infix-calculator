@@ -1,4 +1,5 @@
-public class ListFactory {
+public class ListFactory 
+{
     public static <T> List<T> createlist(String type){
         switch (type.trim().toLowerCase()){
             case "single":
