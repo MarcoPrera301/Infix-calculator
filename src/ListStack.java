@@ -1,7 +1,7 @@
 public class ListStack<T> extends AbstractStack<T> {
     private final IList<T> list;
 
-    public ListStack(List<T> list){
+    public ListStack(IList<T> list){
         super();
         this.list = list;
     }

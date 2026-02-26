@@ -9,7 +9,7 @@ public class StackFactory{
                 return new VectorStack<>();
             case "3":
             case "list":
-              IList<T> list = ListFactory.createlist(listType);
+              IList<T> list = ListFactory.createList(listType);
                 return new ListStack<>(list);
             default:
                 return null;
