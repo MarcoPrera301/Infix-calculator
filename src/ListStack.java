@@ -1,5 +1,5 @@
 public class ListStack<T> extends AbstractStack<T> {
-    private final List<T> list;
+    private final IList<T> list;
 
     public ListStack(List<T> list){
         super();

@@ -1,4 +1,4 @@
-public class DoubleLinkedList<T> extends AbstractList{
+public class DoubleLinkedList<T> extends AbstractList<T>{
     private static class Node<T>{
         T data;
         Node<T> prev;

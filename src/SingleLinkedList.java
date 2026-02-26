@@ -9,7 +9,7 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         }
     }
     private Node<T> head;
-    private SingleLinkedList(){
+    public SingleLinkedList(){
         super();
         this.head = null;
     }
@@ -24,7 +24,7 @@ public class SingleLinkedList<T> extends AbstractList<T>{
             while (current.next != null){
                 current = current.next;
             }
-            current = newNode;
+            current.next = newNode;
         }
         size++;
     }

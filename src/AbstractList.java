@@ -1,6 +1,6 @@
 
 
-public abstract class AbstractList<T> implements List<T> {
+public abstract class AbstractList<T> implements IList<T> {
     protected int size;
 
     public AbstractList(){

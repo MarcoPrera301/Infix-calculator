@@ -1,4 +1,4 @@
-public interface List<T> {
+public interface IList<T> {
     void add(T item);
     T removeLast();
     T getLast();
