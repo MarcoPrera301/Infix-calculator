@@ -1,10 +1,8 @@
 
 public class Calculator{ //falta singelton
 
-    StackA<Double> stack;
     
-    public Calculator() {
-        //stack = new Stack<Double>();    } aca va el stack escogido
+
     
     public double operate(String input) {
 
