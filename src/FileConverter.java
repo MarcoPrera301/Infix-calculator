@@ -14,11 +14,11 @@ public class FileConverter
 
         try {
             String content = Files.readString(Paths.get(filepath));
-            String[] tokens = content.split("\\s+");
+            String[] lines = content.split("\n");
 
-            for (String token : tokens) {
-                if (!token.isEmpty()) {
-                    elements.add(token);
+            for (String line : lines) {
+                if (!line.isEmpty()) {
+                    elements.add(line.trim());
                 }
             }
 
@@ -31,9 +31,22 @@ public class FileConverter
 
     public static String infixToPostfix(ArrayList<String> elements, Stack<String> stack) 
     {
+         ArrayList<String> tokens = new ArrayList<>();
+        for (String expr : elements) {
+            StringBuilder num = new StringBuilder();
+            for (char c : expr.toCharArray()) {
+                if (Character.isDigit(c) || c == '.') {
+                    num.append(c);
+                } else {
+                    if (num.length() > 0) { tokens.add(num.toString()); num.setLength(0); }
+                    if (c != ' ') tokens.add(String.valueOf(c));
+                }
+            }
+            if (num.length() > 0) tokens.add(num.toString());
+        }
         String postfix = "";
 
-        for (String token : elements) 
+        for (String token : tokens) 
             {
             if (isNumber(token)) 
             {
